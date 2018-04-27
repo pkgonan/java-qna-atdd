@@ -44,6 +44,6 @@ public class LoginAcceptanceTest extends AcceptanceTest {
 
         ResponseEntity<String> response = template()
                 .postForEntity("/users/login", request, String.class);
-        assertThat(response.getStatusCode(), is(HttpStatus.UNAUTHORIZED));
+        assertThat(response.getStatusCode(), is(HttpStatus.FORBIDDEN));
     }
 }
